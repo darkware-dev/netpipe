@@ -1,0 +1,22 @@
+Configutation:
+  name: Default
+
+  Properties:
+    Property:
+      name: log-path
+      value: "logs"
+
+  Appenders:
+
+    Console:
+      name: console
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] { %t } %c{1} - %msg%n"
+
+  Loggers:
+
+      Root:
+        level: debug
+        AppenderRef:
+          - ref: console
